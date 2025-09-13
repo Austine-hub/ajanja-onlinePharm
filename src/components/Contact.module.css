@@ -1,0 +1,217 @@
+/* --- Section Container --- */
+.contactSection {
+  display: flex;
+  min-height: 500px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+/* --- Inner Grid Container for better alignment --- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* --- Image Container --- */
+.imageContainer {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.doctorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* --- Form Container --- */
+.formContainer {
+  flex: 1;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Headings --- */
+.title {
+  color: #f97316;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #f3f4f6;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Form Styles --- */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputRow {
+  display: flex;
+  gap: 15px;
+}
+
+.input,
+.select,
+.textarea {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1rem;
+  color: #374151;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input {
+  flex: 1;
+}
+
+.select {
+  flex: 1;
+  cursor: pointer;
+}
+
+.select option {
+  color: #374151;
+  background: white;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* --- Submit Button --- */
+.submitButton {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+  .contactSection {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    height: 250px;
+  }
+
+  .formContainer {
+    padding: 30px 20px;
+  }
+
+  .inputRow {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    padding: 12px;
+  }
+
+  .submitButton {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
