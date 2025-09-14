@@ -20,24 +20,25 @@ const Header = () => {
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <header className={styles.header}>
       {/* Logo */}
-      <a href="/" className={styles.logoBox} aria-label="Go to homepage">
+      <Link to="/" className={styles.logoBox} aria-label="Go to homepage">
         <span className={styles.logo}>PH</span>
         <div>
           <span className={styles.title}>PrognoHealth</span>
           <p className={styles.subtitle}>Corporate Health & Wellness</p>
         </div>
-      </a>
+      </Link>
 
       {/* Navigation */}
       <nav className={styles.nav} aria-label="Main navigation">
+        {/* Home Link */}
+        <Link to="/" className={styles.navLink}>Home</Link>
+
         {/* Services Dropdown */}
         <div className={styles.dropdown} ref={servicesRef}>
           <button
@@ -100,4 +101,5 @@ const Header = () => {
 };
 
 export default Header;
+
 
