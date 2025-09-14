@@ -1,12 +1,10 @@
 import React from "react";
-import { createRoot } from "react-dom/client"; // use named import
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import App from "./App"; // remove .tsx extension
+import App from "./App";
 import "./index.css";
 
-const rootElement = document.getElementById("root")!;
-const root = createRoot(rootElement);
-
+const root = createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -14,4 +12,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-

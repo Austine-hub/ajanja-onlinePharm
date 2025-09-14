@@ -72,3 +72,92 @@
 .ctaBtn:hover {
   background: #047857; /* emerald-700 */
 }
+
+
+/* Add these styles to your existing Header.module.css */
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Toggle Button */
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.dropdownToggle:hover {
+  color: inherit; /* Match your existing navLink hover color */
+}
+
+/* Arrow Icon */
+.arrow {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+/* Dropdown Items */
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background-color: #f8f9fa;
+  color: #007bff; /* Adjust to match your brand color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    background: transparent;
+  }
+  
+  .dropdownItem {
+    padding-left: 2rem;
+    border-bottom: none;
+  }
+}
