@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* ========== Base Styles ========== */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -19,6 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth; /* ✅ nice UX on anchor scroll */
+}
+
 /* Links */
 a {
   font-weight: 500;
@@ -33,8 +36,11 @@ a:hover {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100dvh; /* ✅ dynamic viewport for mobile stability */
-  overflow-x: hidden; /* ✅ prevent horizontal scroll "dancing" */
+  min-height: 100vh;   /* ✅ fallback */
+  min-height: 100dvh;  /* ✅ modern browsers */
+  overflow-x: hidden;  /* ✅ prevent horizontal scroll "dancing" */
+  word-wrap: break-word;  /* ✅ long words won’t break layout */
+  overflow-wrap: break-word;
   background-color: inherit;
   color: inherit;
 }

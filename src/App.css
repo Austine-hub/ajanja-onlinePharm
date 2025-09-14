@@ -1,10 +1,14 @@
+/* app.css — keep it lightweight, Tailwind handles most styling */
+
+/* Root wrapper */
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 100%;   /* ✅ allow full responsive width */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0;        /* ✅ remove default padding; control spacing with Tailwind */
 }
 
+/* Optional: keep logo spin demo if you like */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -33,6 +37,7 @@
   }
 }
 
+/* Optional: card demo */
 .card {
   padding: 2em;
 }
