@@ -96,3 +96,10 @@ img, video {
 * {
   box-sizing: border-box;
 }
+
+
+/* Put in index.css */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
